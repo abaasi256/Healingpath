@@ -26,19 +26,23 @@ log "📥 Pulling latest changes from $BRANCH..."
 git fetch origin
 git reset --hard origin/$BRANCH
 
-# Install dependencies
-log "📦 Installing dependencies..."
+# Install dependencies (including dev dependencies for build)
+log "📦 Installing all dependencies for build..."
 if [ -f "package-lock.json" ]; then
-    npm ci --omit=dev --legacy-peer-deps || npm install --omit=dev --legacy-peer-deps
+    npm ci --legacy-peer-deps || npm install --legacy-peer-deps
 elif [ -f "yarn.lock" ]; then
-    npm install --omit=dev --legacy-peer-deps
+    npm install --legacy-peer-deps
 else
-    npm install --omit=dev --legacy-peer-deps
+    npm install --legacy-peer-deps
 fi
 
 # Build the application
 log "🔨 Building the application..."
 npm run build
+
+# Clean up dev dependencies after build
+log "🧹 Cleaning up dev dependencies..."
+npm prune --omit=dev
 
 # Create server.js file for standalone mode
 log "📝 Creating server.js for standalone mode..."
