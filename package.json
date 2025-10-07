@@ -6,8 +6,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "node server.js",
+    "start:pm2": "pm2 start ecosystem.config.js --env production",
+    "stop:pm2": "pm2 stop healingpath",
+    "restart:pm2": "pm2 restart healingpath",
+    "lint": "next lint",
+    "deploy": "./deploy.sh"
   },
   "dependencies": {
     "clsx": "^2.0.0",
