@@ -29,11 +29,11 @@ git reset --hard origin/$BRANCH
 # Install dependencies
 log "📦 Installing dependencies..."
 if [ -f "package-lock.json" ]; then
-    npm ci --omit=dev
+    npm ci --omit=dev --legacy-peer-deps || npm install --omit=dev --legacy-peer-deps
 elif [ -f "yarn.lock" ]; then
-    npm install --production
+    npm install --omit=dev --legacy-peer-deps
 else
-    npm install --production
+    npm install --omit=dev --legacy-peer-deps
 fi
 
 # Build the application
