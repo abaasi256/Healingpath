@@ -7,10 +7,10 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 const services = [
-  { id: 'general-womens-health', name: 'General Women\'s Health', duration: 60, price: 275 },
-  { id: 'abortion-services', name: 'Abortion Services', duration: 120, price: 850 },
-  { id: 'post-abortion-care', name: 'Post-Abortion Care', duration: 45, price: 225 },
-  { id: 'telehealth-consultations', name: 'Telehealth Consultations', duration: 30, price: 175 },
+  { id: 'general-womens-health', name: 'General Women\'s Health', duration: 60 },
+  { id: 'abortion-services', name: 'Abortion Services', duration: 120 },
+  { id: 'post-abortion-care', name: 'Post-Abortion Care', duration: 45 },
+  { id: 'telehealth-consultations', name: 'Telehealth Consultations', duration: 30 },
 ]
 
 const timeSlots = [
@@ -241,7 +241,7 @@ const BookingSystem = () => {
                             <Clock className="w-4 h-4" />
                             <span>{service.duration} min</span>
                           </div>
-                          <span className="font-semibold text-teal-600">${service.price}</span>
+                          <span className="font-semibold text-teal-600">Contact for Pricing</span>
                         </div>
                       </div>
                     </div>
@@ -449,7 +449,7 @@ const BookingSystem = () => {
                     </div>
                     <div className="flex justify-between font-semibold text-lg pt-2 border-t border-gray-200">
                       <span>Total:</span>
-                      <span>${selectedServiceInfo?.price}</span>
+                      <span>Contact for Pricing</span>
                     </div>
                   </div>
                 </div>

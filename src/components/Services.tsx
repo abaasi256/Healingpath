@@ -10,7 +10,6 @@ const services = [
     id: 'general-womens-health',
     name: 'General Women\'s Health',
     description: 'Routine check-ups, exams, and consultations for comprehensive women\'s healthcare',
-    price: 275,
     duration: 60,
     category: 'routine',
     featured: true,
@@ -20,7 +19,6 @@ const services = [
     id: 'abortion-services',
     name: 'Abortion Services',
     description: 'Confidential support with safe medical guidance (where legally permitted)',
-    price: 850,
     duration: 120,
     category: 'reproductive',
     featured: true,
@@ -30,7 +28,6 @@ const services = [
     id: 'telehealth-consultations',
     name: 'Telehealth Consultations',
     description: 'Virtual appointments for privacy and convenience',
-    price: 175,
     duration: 30,
     category: 'virtual',
     featured: true,
@@ -103,8 +100,8 @@ const Services = () => {
                 </p>
 
                 <div className="flex items-center justify-between pt-4">
-                  <div className="text-2xl font-bold text-gray-800">
-                    ${service.price}
+                  <div className="text-lg font-semibold text-teal-600">
+                    Contact for Pricing
                   </div>
                   <Link
                     href={`/services/${service.id}`}

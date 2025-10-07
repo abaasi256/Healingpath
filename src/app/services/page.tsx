@@ -13,7 +13,6 @@ const services = [
     name: 'General Women\'s Health',
     description: 'Routine check-ups, exams, and consultations for comprehensive women\'s healthcare',
     longDescription: 'Our general women\'s health services provide comprehensive routine care including annual exams, preventive screenings, and health consultations. Our experienced medical team offers personalized care in a comfortable, confidential environment.',
-    price: 275,
     duration: 60,
     category: 'routine',
     features: [
@@ -34,7 +33,6 @@ const services = [
     name: 'Abortion Services',
     description: 'Confidential support with safe medical guidance (where legally permitted)',
     longDescription: 'Professional abortion services with compassionate, confidential care in a safe clinical environment. Our board-certified physicians provide comprehensive medical care with complete privacy and support throughout the process.',
-    price: 850,
     duration: 120,
     category: 'reproductive',
     features: [
@@ -55,7 +53,6 @@ const services = [
     name: 'Post-Abortion Care',
     description: 'Follow-up visits, recovery checks, and counseling for comprehensive aftercare',
     longDescription: 'Comprehensive post-abortion care including follow-up visits, recovery monitoring, and emotional support. Our caring medical team ensures your complete recovery with personalized aftercare plans.',
-    price: 225,
     duration: 45,
     category: 'followup',
     features: [
@@ -76,7 +73,6 @@ const services = [
     name: 'Telehealth Consultations',
     description: 'Virtual appointments for privacy and convenience',
     longDescription: 'Secure virtual consultations providing convenient access to our medical professionals from the privacy of your home. Perfect for follow-up visits, consultations, and non-examination medical care.',
-    price: 175,
     duration: 30,
     category: 'virtual',
     features: [
@@ -149,8 +145,8 @@ const Services = () => {
         </div>
 
         <div className="flex items-center justify-between pt-4">
-          <div className="text-2xl font-bold text-gray-800">
-            ${service.price}
+          <div className="text-lg font-semibold text-teal-600">
+            Contact for Pricing
           </div>
           <Link
             href={`/services/${service.id}`}

@@ -42,7 +42,6 @@ const services = [
     name: 'Gynecology',
     description: 'Comprehensive women\'s health services including routine exams and reproductive care',
     longDescription: 'Our gynecology services provide comprehensive women\'s health care including routine gynecological exams, contraceptive counseling, STI testing and treatment, and reproductive health consultations. Our board-certified gynecologists offer compassionate, confidential care in a comfortable environment.',
-    price: 275,
     duration: 60,
     category: 'reproductive',
     features: [
@@ -122,8 +121,8 @@ export default function ServiceDetail({ params }: { params: { id: string } }) {
                   <Clock className="w-5 h-5 text-gold-500" />
                   <span className="text-gray-700">{service.duration} minutes</span>
                 </div>
-                <div className="text-3xl font-bold text-gray-800">
-                  ${service.price}
+                <div className="text-lg font-semibold text-teal-600">
+                  Contact for Pricing
                 </div>
               </div>
             </div>
@@ -208,8 +207,8 @@ export default function ServiceDetail({ params }: { params: { id: string } }) {
                   </div>
                   
                   <div className="flex items-center justify-between py-3 border-b border-gray-100">
-                    <span className="text-gray-600">Price</span>
-                    <span className="text-2xl font-bold text-gray-800">${service.price}</span>
+                    <span className="text-gray-600">Pricing</span>
+                    <span className="font-semibold text-teal-600">Contact Us</span>
                   </div>
                   
                   <Link

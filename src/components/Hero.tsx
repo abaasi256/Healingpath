@@ -171,8 +171,8 @@ const Hero = () => {
             <div className="relative w-full h-96 lg:h-[500px] rounded-3xl overflow-hidden shadow-2xl">
               {/* Clinic Image */}
               <Image
-                src="/images/Healing_Path_Clinic.png"
-                alt="Dr. Pavin's Clinic - Professional gynecology clinic and women's health facility in Dubai"
+                src="/images/Hero-Healingpath.jpeg"
+                alt="HealingPath - Premium women's healthcare facility with modern medical equipment and comfortable environment"
                 fill
                 className="object-cover"
                 priority
