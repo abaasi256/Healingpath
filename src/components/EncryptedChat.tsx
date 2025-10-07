@@ -9,7 +9,7 @@ interface WhatsAppChatProps {
 }
 
 const WhatsAppChat: React.FC<WhatsAppChatProps> = ({ isOpen, onToggle }) => {
-  const whatsappNumber = '+971501234567' // Replace with actual WhatsApp number
+  const whatsappNumber = '+64220418391' // Replace with actual WhatsApp number
   const defaultMessage = 'Hello, I would like to book an appointment at HealingPath Clinic.'
 
   const openWhatsApp = () => {

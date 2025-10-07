@@ -10,8 +10,8 @@ const contactMethods = [
     icon: Phone,
     title: 'Call Us',
     description: 'Speak directly with our care coordinators',
-    value: '(555) 123-4567',
-    action: 'tel:+15551234567',
+    value: '+64 22 041 8391',
+    action: 'tel:+64220418391',
     available: '24/7 Emergency Line',
     color: 'from-teal-500 to-teal-600'
   },
@@ -19,8 +19,8 @@ const contactMethods = [
     icon: Mail,
     title: 'Email Us',
     description: 'Send us a secure message',
-    value: 'contact@healingpath.com',
-    action: 'mailto:contact@healingpath.com',
+    value: 'info@healingpath.care',
+    action: 'mailto:info@healingpath.care',
     available: 'Response within 4 hours',
     color: 'from-gold-500 to-gold-600'
   },
@@ -29,7 +29,7 @@ const contactMethods = [
     title: 'WhatsApp',
     description: 'Instant secure messaging via WhatsApp',
     value: 'Chat on WhatsApp',
-    action: 'https://wa.me/15551234567?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20services',
+    action: 'https://wa.me/64220418391?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20services',
     available: 'Available 24/7',
     color: 'from-green-500 to-green-600'
   }
@@ -460,7 +460,7 @@ const ContactPage = () => {
                   For urgent medical concerns outside office hours
                 </p>
                 <a
-                  href="tel:+15551234567"
+                  href="tel:+64220418391"
                   className="block w-full text-center bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 smooth-transition font-semibold"
                 >
                   Call Emergency Line
