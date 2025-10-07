@@ -103,6 +103,7 @@ const Services = () => {
                   <Link
                     href={`/services/${service.id}`}
                     className="group/btn flex items-center space-x-2 text-teal-600 hover:text-teal-700 font-medium smooth-transition"
+                    aria-label={`Learn more about ${service.name}`}
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />

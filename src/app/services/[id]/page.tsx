@@ -95,6 +95,25 @@ const services = [
 ]
 
 export default function ServiceDetail({ params }: { params: { id: string } }) {
+  // Add error handling for invalid service IDs
+  if (!params || !params.id) {
+    return (
+      <main className="min-h-screen luxury-gradient">
+        <Navigation />
+        <div className="pt-24 pb-12 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">Service Not Found</h1>
+            <p className="text-gray-600 mb-6">Invalid service request.</p>
+            <Link href="/services" className="text-teal-600 hover:text-teal-700 font-medium">
+              ← Back to Services
+            </Link>
+          </div>
+        </div>
+        <Footer />
+      </main>
+    )
+  }
+
   const service = services.find(s => s.id === params.id)
 
   if (!service) {
