@@ -40,6 +40,11 @@ fi
 log "🔨 Building the application..."
 npm run build
 
+# Copy required files for standalone mode
+log "📋 Setting up standalone server..."
+cp -r public .next/standalone/public
+cp -r .next/static .next/standalone/.next/static
+
 # Clean up dev dependencies after build
 log "🧹 Cleaning up dev dependencies..."
 npm prune --omit=dev
@@ -47,40 +52,20 @@ npm prune --omit=dev
 # Create server.js file for standalone mode
 log "📝 Creating server.js for standalone mode..."
 cat > server.js << 'EOF'
-const { createServer } = require('http')
-const { parse } = require('url')
-const next = require('next')
-
-const dev = process.env.NODE_ENV !== 'production'
-const hostname = 'localhost'
-const port = process.env.PORT || 3000
-
-const app = next({ dev, hostname, port })
-const handle = app.getRequestHandler()
-
-app.prepare().then(() => {
-  createServer(async (req, res) => {
-    try {
-      const parsedUrl = parse(req.url, true)
-      await handle(req, res, parsedUrl)
-    } catch (err) {
-      console.error('Error occurred handling', req.url, err)
-      res.statusCode = 500
-      res.end('internal server error')
-    }
-  }).listen(port, (err) => {
-    if (err) throw err
-    console.log(`> Ready on http://${hostname}:${port}`)
-  })
-})
+// This file is deprecated - using .next/standalone/server.js instead
+console.log('Please use .next/standalone/server.js for standalone mode');
 EOF
 
 # Create logs directory
 mkdir -p logs
 
 # Restart PM2 process
-log "🔄 Restarting PM2 process..."
-pm2 restart ecosystem.config.js --env production
+log "🔄 Stopping existing PM2 processes..."
+pm2 stop healingpath || true
+pm2 delete healingpath || true
+
+log "🚀 Starting new PM2 process..."
+pm2 start ecosystem.config.js --env production
 
 # Save PM2 configuration
 pm2 save
