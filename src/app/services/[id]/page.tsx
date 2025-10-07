@@ -161,11 +161,13 @@ export default function ServiceDetail({ params }: { params: { id: string } }) {
             <div className="relative">
               <div className="w-full h-80 rounded-3xl overflow-hidden shadow-xl relative">
                 <Image
-                  src={`/images/${service.image === 'reproductive-care' ? 'Safe_Abortion_Care_Detail' : 
-                    service.image === 'consultation' ? 'Wellness_Consultation_Service' : 
-                    service.image === 'gynecology' ? 'Gynecology_Detail' : 
-                    'Healing_Path_Clinic'}.png`}
-                  alt={`${service.name} - Detailed view of professional service at HealingPath Clinic`}
+                  src={`/images/${
+                    service.id === 'abortion-services' ? 'Safe_Abortion_Care_Detail.png' :
+                    service.id === 'telehealth-consultations' ? 'Telehealth.jpeg' :
+                    service.id === 'general-womens-health' ? 'Gynecology_Detail.png' :
+                    'Healing_Path_Clinic.png'
+                  }`}
+                  alt={`${service.name} - Professional service at HealingPath Clinic`}
                   fill
                   className="object-cover"
                 />

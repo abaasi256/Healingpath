@@ -103,15 +103,13 @@ const Services = () => {
       {/* Service Image */}
       <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden group-hover:scale-105 smooth-transition relative">
         <Image
-          src={`/images/${service.image === 'reproductive-care' ? 'Safe_Abortion_Care_Service' : 
-            service.image === 'consultation' ? 'Wellness_Consultation_Service' : 
-            service.image === 'gynecology' ? 'Gynecology_Service' : 
-            service.image === 'iv-therapy' ? 'Wellness_Center' : 
-            service.image === 'aesthetic' ? 'Reception_&_Lounge' : 
-            service.image === 'hormone' ? 'Integrated_Pharmacy' : 
-            service.image === 'nutrition' ? 'Consultation_Rooms' : 
-            service.image === 'executive' ? 'Healing_Path_Clinic' : 
-            'Healing_Path_Clinic'}.png`}
+          src={`/images/${
+            service.id === 'abortion-services' ? 'Safe_Abortion_Care_Detail.png' :
+            service.id === 'telehealth-consultations' ? 'Telehealth.jpeg' :
+            service.id === 'general-womens-health' ? 'Gynecology_Service.png' :
+            service.id === 'post-abortion-care' ? 'Wellness_Consultation_Service.png' :
+            'Healing_Path_Clinic.png'
+          }`}
           alt={`${service.name} - Professional service at HealingPath Clinic`}
           fill
           className="object-cover"
