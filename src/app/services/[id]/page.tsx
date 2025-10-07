@@ -9,58 +9,88 @@ import Image from 'next/image'
 
 const services = [
   {
-    id: 'safe-abortion',
-    name: 'Safe Abortion Care',
-    description: 'Comprehensive, confidential abortion services with compassionate care',
-    longDescription: 'Our experienced medical team provides safe, confidential abortion services in a supportive environment. We offer comprehensive pre and post-procedure care with the highest medical standards and complete privacy. Our state-of-the-art abortion clinic is equipped with advanced medical technology and staffed by board-certified physicians who specialize in reproductive health and provide compassionate, non-judgmental care.',
-    price: 850,
-    duration: 120,
-    category: 'reproductive',
-    features: [
-      'Confidential consultation',
-      'Medical and surgical options',
-      'Pre-procedure counseling',
-      'Safe, sterile environment',
-      'Post-procedure follow-up',
-      'Emotional support services',
-      'HIPAA-compliant privacy',
-      'Board-certified physicians',
-      'Emergency support available'
-    ],
-    benefits: [
-      'Same-day appointments available',
-      'Comprehensive aftercare plan',
-      'Emotional counseling included',
-      'Financial assistance options',
-      'Private entrance and rooms',
-      '24/7 post-procedure support'
-    ],
-    image: 'reproductive-care'
-  },
-  {
-    id: 'gynecology',
-    name: 'Gynecology',
-    description: 'Comprehensive women\'s health services including routine exams and reproductive care',
-    longDescription: 'Our gynecology services provide comprehensive women\'s health care including routine gynecological exams, contraceptive counseling, STI testing and treatment, and reproductive health consultations. Our board-certified gynecologists offer compassionate, confidential care in a comfortable environment.',
+    id: 'general-womens-health',
+    name: 'General Women\'s Health',
+    description: 'Routine check-ups, exams, and consultations for comprehensive women\'s healthcare',
+    longDescription: 'Our general women\'s health services provide comprehensive routine care including annual exams, preventive screenings, and health consultations. Our experienced medical team offers personalized care in a comfortable, confidential environment.',
     duration: 60,
-    category: 'reproductive',
+    category: 'routine',
     features: [
       'Annual gynecological exams',
-      'Contraceptive counseling and services',
-      'STI testing and treatment',
-      'Reproductive health consultations',
-      'Pap smears and cervical cancer screening',
-      'Menstrual disorder evaluation'
+      'Routine health screenings',
+      'Preventive care consultations',
+      'Health maintenance planning',
+      'Confidential medical records',
+      'Same-day appointments available',
+      'Comfortable examination rooms',
+      'Experienced medical staff',
+      'Follow-up care coordination'
     ],
     benefits: [
       'Comprehensive women\'s health care',
       'Confidential and comfortable environment',
       'Same-day appointments available',
-      'Board-certified gynecologists',
+      'Board-certified physicians',
       'Preventive care focus',
-      'Complete reproductive health support'
+      'Complete health support'
     ],
     image: 'gynecology'
+  },
+  {
+    id: 'abortion-services',
+    name: 'Abortion Services',
+    description: 'Confidential support with safe medical guidance (where legally permitted)',
+    longDescription: 'Professional abortion services with compassionate, confidential care in a safe clinical environment. Our board-certified physicians provide comprehensive medical care with complete privacy and support throughout the process.',
+    duration: 120,
+    category: 'reproductive',
+    features: [
+      'Confidential consultation and counseling',
+      'Safe medical procedures',
+      'Professional medical staff',
+      'Complete privacy protection',
+      'Supportive care environment',
+      'Post-procedure follow-up',
+      'Emergency support available',
+      'HIPAA-compliant privacy',
+      'Compassionate medical care'
+    ],
+    benefits: [
+      'Same-day appointments available',
+      'Comprehensive aftercare plan',
+      'Emotional counseling included',
+      'Private entrance and rooms',
+      '24/7 post-procedure support',
+      'Board-certified physicians'
+    ],
+    image: 'reproductive-care'
+  },
+  {
+    id: 'telehealth-consultations',
+    name: 'Telehealth Consultations',
+    description: 'Virtual appointments for privacy and convenience',
+    longDescription: 'Secure virtual consultations providing convenient access to our medical professionals from the privacy of your home. Perfect for follow-up visits, consultations, and non-examination medical care.',
+    duration: 30,
+    category: 'virtual',
+    features: [
+      'Secure video consultations',
+      'Private virtual appointments',
+      'Convenient home access',
+      'Professional medical advice',
+      'Prescription management',
+      'Follow-up care coordination',
+      'Flexible scheduling options',
+      'HIPAA-compliant platform',
+      'Technical support available'
+    ],
+    benefits: [
+      'No travel required',
+      'Complete privacy at home',
+      'Flexible scheduling',
+      'Secure platform',
+      'Professional consultation',
+      'Cost-effective care'
+    ],
+    image: 'consultation'
   }
 ]
 

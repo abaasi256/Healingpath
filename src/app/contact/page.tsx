@@ -432,9 +432,8 @@ const ContactPage = () => {
                 <div className="space-y-4">
                   <div>
                     <p className="font-medium text-gray-800">HealingPath Clinic</p>
-                    <p className="text-gray-600">123 Wellness Boulevard</p>
-                    <p className="text-gray-600">Suite 200</p>
-                    <p className="text-gray-600">Beverly Hills, CA 90210</p>
+                    <p className="text-gray-600">Al Wasl Road</p>
+                    <p className="text-gray-600">Jumeirah, Dubai, UAE</p>
                   </div>
                   
                   <div className="w-full h-32 bg-gradient-to-br from-sage-100 to-teal-100 rounded-xl flex items-center justify-center">

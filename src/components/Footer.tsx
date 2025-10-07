@@ -64,8 +64,8 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-sage-400 mt-1" />
                 <span className="text-gray-300">
-                  123 Wellness Avenue<br />
-                  Beverly Hills, CA 90210
+                  Al Wasl Road<br />
+                  Jumeirah, Dubai, UAE
                 </span>
               </div>
             </div>
