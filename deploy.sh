@@ -71,4 +71,4 @@ pm2 start ecosystem.config.js --env production
 pm2 save
 
 log "✅ Deployment completed successfully!"
-log "🌐 HealingPath is running on https://healingpath.care"
+log "🌐 HealingPath is running on https://healingpath.care (port 3003)"
