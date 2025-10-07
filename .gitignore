@@ -46,7 +46,7 @@ logs
 
 # Package managers
 yarn.lock
-package-lock.json
+# package-lock.json
 
 # Duplicate folders
 Dr_Pavin/

@@ -28,7 +28,13 @@ git reset --hard origin/$BRANCH
 
 # Install dependencies
 log "📦 Installing dependencies..."
-npm ci --only=production
+if [ -f "package-lock.json" ]; then
+    npm ci --omit=dev
+elif [ -f "yarn.lock" ]; then
+    npm install --production
+else
+    npm install --production
+fi
 
 # Build the application
 log "🔨 Building the application..."
